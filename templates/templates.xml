@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<templates>
+	<template 
+		autoinsert="true" 
+		context="php.ware.Config.AnnonateEntity" 
+		deleted="false" 
+		description="template for annotate an entity" 
+		enabled="true"
+		id="anne" 
+		name="anne">annonate entity ${EntityName} {
+	${cursor}
+}</template>
+<template 
+	autoinsert="true" 
+	context="php.ware.Config.AnnonateEntity" 
+	deleted="false" 
+	description="template for annotate an entity feature" 
+	enabled="true"
+	id="annef" 
+	name="annef">annonate ${EntityName}::${EntityFeature}{
+	${cursor}
+}</template>
+<template 
+	autoinsert="true" 
+	context="php.ware.Config.ConfigDeclaration" 
+	deleted="false" 
+	description="template for configuration" 
+	enabled="true"
+	id="conf" 
+	name="conf">configure ${name}{
+	${cursor}
+}</template>
+</templates>
