@@ -14,6 +14,7 @@ import org.eclipse.xtext.ui.label.StylerFactory;
 
 import php.ware.config.AnnonateEntity;
 import php.ware.config.ConfigDeclaration;
+import php.ware.config.ConfigModel;
 import php.ware.config.Import;
 import php.ware.config.PackageDeclaration;
 import php.ware.config.Property;
@@ -34,6 +35,14 @@ public class ConfigLabelProvider extends DefaultEObjectLabelProvider {
     }
 
     // Labels and icons can be computed like this:
+    StyledString text(ConfigModel ele) {
+        return new StyledString(ele.getName(), StyledString.QUALIFIER_STYLER);
+    }
+
+    String image(ConfigModel ele) {
+        return ele.eClass().getName() + ".gif";
+    }
+
     StyledString text(Import ele) {
         return new StyledString(ele.getImportedNamespace(),
                 StyledString.QUALIFIER_STYLER);
