@@ -16,7 +16,6 @@ import php.ware.config.AnnonateEntity;
 import php.ware.config.ConfigDeclaration;
 import php.ware.config.ConfigModel;
 import php.ware.config.Import;
-import php.ware.config.PackageDeclaration;
 import php.ware.config.Property;
 
 import com.google.inject.Inject;
@@ -49,14 +48,6 @@ public class ConfigLabelProvider extends DefaultEObjectLabelProvider {
     }
 
     String image(Import ele) {
-        return ele.eClass().getName() + ".gif";
-    }
-
-    StyledString text(PackageDeclaration ele) {
-        return new StyledString(ele.getName(), StyledString.QUALIFIER_STYLER);
-    }
-
-    String image(PackageDeclaration ele) {
         return ele.eClass().getName() + ".gif";
     }
 
